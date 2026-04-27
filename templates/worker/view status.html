@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="500" border="1">
+  <tr>
+    <th>S.no</th>
+    <th>Budget</th>
+    <th>Request</th>
+    <th>Date</th>
+    <th>Username</th>
+    <th>Address</th>
+    <th>Location</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{i.price }}</td>
+    <td>&nbsp;{{ i.REQUEST.request }}</td>
+    <td>&nbsp;{{ i.REQUEST.date }}</td>
+         <td>&nbsp;{{ i.REQUEST.USER.name }}</td>
+    <td>{{ i.REQUEST.USER.place }}<br>{{ i.REQUEST.USER.post_office }}<br>{{i.REQUEST.USER.pincode}}</td>
+    <td><a href="https://www.google.co.in/maps/{{ i.REQUEST.USER.latitude }}/{{ i.REQUEST.USER.longitude }}">Trace</a></td>
+    <td>{{ i.REQUEST.USER.email }}</td>
+    <td>{{ i.REQUEST.USER.phone_number }}</td>
+    <td>&nbsp;{{ i.status }}</td>
+    <td><a href="/add_material/{{ i.REQUEST.id }}">Add Material</a><br>
+   <a href="/view_material/{{ i.REQUEST.id }}">view material</a></td>
+    <td><a href="/view_advance_amount/{{ i.id }}">Payment status</a><br></td>
+    <td><a href="/chatt/{{ i.USER.id }}">Chat</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

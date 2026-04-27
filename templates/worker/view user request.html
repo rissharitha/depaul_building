@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width=1000" border="1">
+  <tr>
+    <th>S.no</th>
+    <th>Portifolio</th>
+    <th>Request</th>
+    <th>Date</th>
+    <th>Username</th>
+    <th>Address</th>
+    <th>Location</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+ </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{forloop.counter }}</td>
+    <td>&nbsp;{{ i.PORTFOLIO.type }}</td>
+    <td>&nbsp;{{ i.request }}</td>
+    <td>&nbsp;{{ i.request_date }}</td>
+    <td>&nbsp;{{ i.USER.name }}</td>
+    <td>{{ i.USER.place }}<br>{{ i.USER.post_office }}<br>{{i.USER.pincode}}</td>
+    <td><a href="https://www.google.co.in/maps/{{ i.USER.latitude }}/{{ i.USER.longitude }}">Trace</a></td>
+    <td>{{ i.USER.email }}</td>
+    <td>{{ i.USER.phone_number }}</td>
+    <td><a href="/approve/{{ i.id }}">Approve</a><br>
+    <a href="/reject/{{ i.id }}">Reject</a></td>
+  </tr>
+    {%  endfor %}
+</table>
+
+</body>
+</html>

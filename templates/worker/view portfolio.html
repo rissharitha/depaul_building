@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width=1000" border="1">
+  <tr>
+    <th>S.no</th>
+    <th>Image 1</th>
+    <th>Image 2</th>
+    <th>Image 3</th>
+    <th>Image 4</th>
+    <th>Type</th>
+    <th>Experience</th>
+    <th>&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;<img src="{{ i.image1 }}" height="100" width="100" alt=""/></td>
+    <td>&nbsp;<img src="{{ i.image2 }}" height="100" width="100" alt=""/></td>
+    <td>&nbsp;<img src="{{ i.image3 }}" height="100" width="100" alt=""/></td>
+    <td>&nbsp;<img src="{{ i.image4 }}" height="100" width="100" alt=""/></td>
+    <td>&nbsp;{{ i.type }}</td>
+    <td>&nbsp;{{ i.experience }}</td>
+    <td><a href="/update/{{ i.id }}">udate</a><br>
+    <a href="/delete/{{ i.id }}">delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

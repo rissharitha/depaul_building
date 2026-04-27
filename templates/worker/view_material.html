@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="500" border="1">
+  <tr>
+    <th>S.no</th>
+    <th>Material</th>
+    <th>Quantity</th>
+    <th>Details</th>
+
+  </tr>
+    {% for i in view %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{i.material }}</td>
+    <td>&nbsp;{{ i.quantity }}</td>
+    <td>&nbsp;{{ i.details}}</td>
+ <td>  <a href="/delete_material/{{ i.id }}">delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

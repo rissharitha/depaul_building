@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/view_and_edit_profilebuttonclick" method="post">
+<table width="500" border="1">
+  <tr>
+    <td>Name</td>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value ="{{ data.name }}""/></td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" value = "{{ data.age }}"/></td>
+  </tr>
+  <tr>
+    <td>Phone no</td>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" value = "{{ data.phone_number }}"/></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" value="{{ data.email }}"/></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" value="{{ data.gender }} "/></td>
+  </tr>
+  <tr>
+    <td>Pincode</td>
+    <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6"  value="{{ data.pincode }}"/></td>
+  </tr>
+  <tr>
+    <td>Postoffice</td>
+    <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" id="textfield7"  value="{{ data.post_office }}"/></td>
+  </tr>
+  <tr>
+    <td>Place</td>
+    <td><label for="textfield8"></label>
+      <input type="text" name="textfield8" id="textfield8"  value="{{ data.place }}"/></td>
+  </tr>
+     <tr>
+    <td>Skills</td>
+    <td><label for="textfield8"></label>
+      <input type="text" name="s" id="textfield8"  value="{{ data.place }}"/></td>
+  </tr>
+     <tr>
+    <td>Qualification</td>
+    <td><label for="textfield8"></label>
+      <input type="text" name="q" id="textfield8"  value="{{ data.place }}"/></td>
+  </tr>
+    <tr>
+    <td>Latitude</td>
+    <td><label for="textfield9"></label>
+      <input type="text" name="textfield9" id="textfield9" value="{{ data.latitude }}"/></td>
+  </tr>
+  <tr>
+    <td>Longitude</td>
+    <td><label for="textfield10"></label>
+      <input type="text" name="textfield10" id="textfield10" value="{{ data.longitude }}"/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" name="button" id="button" value="Update"/></td>
+    </tr>
+</table>
+
+</form>
+</body>
+</html>
